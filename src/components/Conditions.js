@@ -15,9 +15,9 @@ const conditions = (props) => {
  
                 <div>
  
-                    <h2><strong>{props.responseObj.list[0].name}</strong></h2>
- 
-                    <p>It is currently {Math.round(props.responseObj.list[0].main.temp-273.15)} degrees out with {props.responseObj.list[0].weather[0].description}.</p>
+                    <h1><strong>{props.responseObj.list[0].name}</strong></h1>
+                    <img src={`http://openweathermap.org/img/wn/${props.responseObj.list[0].weather[0].icon}@2x.png`}></img>
+                    <h2> {Math.round(props.responseObj.list[0].main.temp-273.15)}°C</h2>
  
                 </div>
  

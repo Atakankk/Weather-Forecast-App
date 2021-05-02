@@ -16,7 +16,7 @@ const Forecast = () => {
         fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${city}`, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "8e8d9bafc2mshf5c21874e862fbep12c73cjsnaaac776688a7",
+		"x-rapidapi-key": "8f1ae360c5mshf85c1569879e598p1ca634jsn29e2240b238d",
 		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
 	}
 })
@@ -25,6 +25,7 @@ const Forecast = () => {
 .then(response => {
 	
     setResponseObj(response)
+    console.log(response)
 })
 .catch(err => {
 	console.error(err);
@@ -49,7 +50,7 @@ const Forecast = () => {
                 
                 <div  className="submitForecast">
                     <form onSubmit={handleSubmit}>
-                        <label id="labelCity">City:</label><br></br>
+                        <label id="labelCity"><strong>City:</strong></label><br></br>
                         <input type="text" required
                         value={city}
                         onChange={(e) => setCity(e.target.value)}></input><br></br>
