@@ -13,7 +13,7 @@ const conditions = (props) => {
  
             {props.responseObj.cod === "200" ?
  
-                <div>
+                <div className="response">
  
                     <h1><strong>{props.responseObj.list[0].name}</strong></h1>
                     <img src={`http://openweathermap.org/img/wn/${props.responseObj.list[0].weather[0].icon}@2x.png`}></img>

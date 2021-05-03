@@ -51,7 +51,7 @@ const Forecast = () => {
                 <div  className="submitForecast">
                     <form onSubmit={handleSubmit}>
                         <label id="labelCity"><strong>City:</strong></label><br></br>
-                        <input type="text" required
+                        <input type="text" required id="input"
                         value={city}
                         onChange={(e) => setCity(e.target.value)}></input><br></br>
                         
